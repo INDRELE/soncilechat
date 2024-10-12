@@ -22,28 +22,8 @@
     <button id="send-button">Send</button>
 </div>
 
-<script>
-    const messagesDiv = document.getElementById('messages');
-    const usernameInput = document.getElementById('username');
-    const messageInput = document.getElementById('message-input');
-    const sendButton = document.getElementById('send-button');
-
-    sendButton.addEventListener('click', () => {
-        const username = usernameInput.value || 'Anonymous';
-        const message = messageInput.value.trim();
-
-        if (message) {
-            const messageElement = document.createElement('div');
-            messageElement.classList.add('message');
-            messageElement.innerHTML = `<span>${username}:</span> ${message}`;
-            messagesDiv.appendChild(messageElement);
-            messageInput.value = '';
-
-            // Scroll to the latest message
-            messagesDiv.scrollTop = messagesDiv.scrollHeight;
-        }
-    });
-</script>
+<!-- Link to the external JavaScript file -->
+<script src="script.js"></script>
 
 </body>
 </html>
